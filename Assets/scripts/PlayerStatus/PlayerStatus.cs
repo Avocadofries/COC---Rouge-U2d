@@ -20,11 +20,14 @@ public class PlayerStatus : MonoBehaviour {
     public bool MachineMaintain = false; //机械修理
     public bool Freak= false; //怪人
     //骚话
-    public Text TrashTalk;//骚话栏
+    Text TrashTalk;//骚话栏
 
-    public int Sum;
+    int Sum;
+    int Remain;
+    bool Tags; 
 	// Use this for initialization
 	void Start () {
+
       
         Health = int.Parse(GameObject.Find("Canvas/Status/HealthText/HealthValue").GetComponent<Text>().text);
       //  Debug.Log(Health);
@@ -40,8 +43,12 @@ public class PlayerStatus : MonoBehaviour {
         //  Debug.Log(Knowledge);
         Charming = int.Parse(GameObject.Find("Canvas/Status/CharmingText/CharmingValue").GetComponent<Text>().text);
 
+        //垃圾话对象
+        TrashTalk = GameObject.Find("Canvas/TrashTalk").GetComponent<Text>();
+        TrashTalk.text = "这是一个没有图的捏人界面。";
+
         //数值设定按钮相关操作
-         GameObject StrengthPlus = GameObject.Find("Canvas/Status/StrengthText/StrengthPlus");
+        GameObject StrengthPlus = GameObject.Find("Canvas/Status/StrengthText/StrengthPlus");
          Button strplus = (Button)StrengthPlus.GetComponent<Button>();
          strplus.onClick.AddListener(strpl);
          GameObject StrengthMinus = GameObject.Find("Canvas/Status/StrengthText/StrengthMinus");
@@ -199,6 +206,7 @@ public class PlayerStatus : MonoBehaviour {
         Freak = true;
         Psychology = false;
         MachineMaintain = false;
+        TrashTalk.text = "怪人是会互相吸引的。";
     }
 
 	// Update is called once per frame
@@ -218,17 +226,48 @@ public class PlayerStatus : MonoBehaviour {
         GameObject.Find("Canvas/Status/CharmingText/CharmingValue").GetComponent<Text>().text = Charming.ToString();
         //  Debug.Log(Charming);
         Sum = Strength + Agility + Eloquence + Knowledge + Charming;
-        if (Sum > 24)
+       
+        Remain = 24 - Sum;
+
+        Tags = (Psychology || MachineMaintain || Freak);
+       
+        GameObject.Find("Canvas/Remains/Remainnum").GetComponent<Text>().text = Remain.ToString();
+        if (Remain > 0 && (Tags == false))
         {
-            GameObject.Find("Canvas/StartButton").GetComponent<Button>().enabled = false;
-            GameObject.Find("Canvas/TrashTalk").GetComponent<Text>().text = "你不会那么强的。";
+            GameObject.Find("Canvas/Remains/Remainnum").GetComponent<Text>().color = Color.green;
+            GameObject.Find("Canvas/StartButton").GetComponent<Button>().enabled = true;
+           
+        }
+        else if (Remain == 0 && (Tags == false))
+        {
+            TrashTalk.text = "点数够了，选个特质吧。";
+        }
+        else if (Remain == 0 && (Tags == true))
+        {
+            TrashTalk.text = "该上路了。";
+        }
+        else if (Remain > 0 && (Tags == true))
+        {
+            if (Psychology == true)
+            {
+                TrashTalk.text = "世界的表层之下潜伏着小秘密。";
+            }
+            else if (MachineMaintain == true)
+            {
+                TrashTalk.text = "你是绿翔高级技工学院的高材生。";
+            }
+            else
+            {
+                TrashTalk.text = "怪人是会互相吸引的。";
+            }
         }
         else
         {
-            GameObject.Find("Canvas/StartButton").GetComponent<Button>().enabled = true;
-            GameObject.Find("Canvas/TrashTalk").GetComponent<Text>().text = "你还可以继续分配点数，惊不惊喜";
+            GameObject.Find("Canvas/Remains/Remainnum").GetComponent<Text>().color = Color.red;
+            GameObject.Find("Canvas/StartButton").GetComponent<Button>().enabled = false;
+            TrashTalk.text = "你不会那么强的。";
         }
-
+       
     }
 
 
