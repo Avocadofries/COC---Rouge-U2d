@@ -7,18 +7,18 @@ using UnityEngine.Events;
 public class PlayerStatus : MonoBehaviour {
     
     //点数类
-    public int Health;  //健康
-    public int Sanity;  //脑残
+    public static int Health;  //健康
+    public static int Sanity;  //脑残
 
-    public int Strength; //力量
-    public int Agility;  //敏捷
-    public int Eloquence; //口才
-    public int Knowledge; //知识
-    public int Charming; //魅力
+    public static int Strength; //力量
+    public static int Agility;  //敏捷
+    public static int Eloquence; //口才
+    public static int Knowledge; //知识
+    public static int Charming; //魅力
     //特质类
-    public bool Psychology = false;  //灵视
-    public bool MachineMaintain = false; //机械修理
-    public bool Freak= false; //怪人
+    public static bool Psychology = false;  //灵视
+    public static bool MachineMaintain = false; //机械修理
+    public static bool Freak = false; //怪人
     //骚话
     Text TrashTalk;//骚话栏
 
@@ -236,7 +236,7 @@ public class PlayerStatus : MonoBehaviour {
         {
             GameObject.Find("Canvas/Remains/Remainnum").GetComponent<Text>().color = Color.green;
             GameObject.Find("Canvas/StartButton").GetComponent<Button>().enabled = true;
-           
+
         }
         else if (Remain == 0 && (Tags == false))
         {
@@ -248,6 +248,8 @@ public class PlayerStatus : MonoBehaviour {
         }
         else if (Remain > 0 && (Tags == true))
         {
+            GameObject.Find("Canvas/Remains/Remainnum").GetComponent<Text>().color = Color.green;
+            GameObject.Find("Canvas/StartButton").GetComponent<Button>().enabled = true;
             if (Psychology == true)
             {
                 TrashTalk.text = "世界的表层之下潜伏着小秘密。";

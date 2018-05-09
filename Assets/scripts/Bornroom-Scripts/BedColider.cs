@@ -9,6 +9,7 @@ public class BedColider : MonoBehaviour
     public GameObject Panel;
     Text Dialog;
     // Use this for initialization
+    bool legexist = true;
     void Start()
     {
         Panel = GameObject.Find("Main Camera/PlayerCanvas/Dialog");
@@ -31,9 +32,29 @@ public class BedColider : MonoBehaviour
             {
                 HintShow.SetActive(false);
                 Panel.SetActive(true);
-                Dialog.text = "现在不是休息的时候。\n";
-                Dialog.text.Replace("\\n", "\n");
+                if (legexist == true)
+                {
+                    Dialog.text = "现在不是休息的时候。\n";
+                }
+                else
+                {
+                    Dialog.text = "三只脚的床就更没有让人睡觉的欲望了。\n";
+                }
+                if (PlayerStatus.MachineMaintain == true)
+                {
+                    Dialog.text += "(机械维修)似乎可以把床腿拔下来当棍子...\n[F]\n";
+                }
+
             }
+
+            if (Input.GetKeyDown(KeyCode.F) && legexist == true)
+            {
+                PlayerStatus.Strength++;
+                legexist = false;
+                Dialog.text = "三只脚的床就更没有让人睡觉的欲望了。\n";
+            }
+
+            Dialog.text.Replace("\\n", "\n");
 
         }
     }
@@ -49,6 +70,11 @@ public class BedColider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (legexist == false)
+        {
+            PlayerStatus.Strength++;
+            Dialog.text = "三条腿的床就更没有让人睡觉的欲望了。";
+        }
 
     }
 }
