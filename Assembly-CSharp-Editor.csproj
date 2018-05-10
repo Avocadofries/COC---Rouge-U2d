@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{2AD5202F-BD81-BE8F-879B-BDFB355D75F3}</ProjectGuid>
+    <ProjectGuid>{21B1F2E7-DC0C-C2B8-FCD8-1AFEBA2D8A70}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -67,13 +67,13 @@
     <Compile Include="Assets\Dialogue System\Scripts\Editor\Wizards\PlayerSetupWizard.cs" />
     <Compile Include="Assets\Dialogue System\Scripts\Supplemental\Utility\Editor\SupplementalMenuItems.cs" />
     <Reference Include="Assembly-UnityScript">
-      <HintPath>D:/Unity/Monster-Paradise/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+      <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/Unity/Monster-Paradise/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Unity/Monster-Paradise/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -309,35 +309,38 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="DialogueSystem">
-      <HintPath>D:/Unity/Monster-Paradise/Assets/Dialogue System/DLLs/DialogueSystem.dll</HintPath>
+      <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Assets/Dialogue System/DLLs/DialogueSystem.dll</HintPath>
     </Reference>
     <Reference Include="LuaInterpreter">
-      <HintPath>D:/Unity/Monster-Paradise/Assets/Dialogue System/DLLs/LuaInterpreter.dll</HintPath>
+      <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Assets/Dialogue System/DLLs/LuaInterpreter.dll</HintPath>
     </Reference>
     <Reference Include="DialogueSystemEditors">
-      <HintPath>D:/Unity/Monster-Paradise/Assets/Dialogue System/DLLs/Editor/DialogueSystemEditors.dll</HintPath>
+      <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Assets/Dialogue System/DLLs/Editor/DialogueSystemEditors.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/carbi/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/carbi/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Analytics">
-      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll</HintPath>
+      <HintPath>C:/Users/carbi/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/carbi/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/carbi/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/carbi/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
@@ -372,7 +375,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{F6504F93-6F0C-8A90-371C-681A59045C46}</Project>
+      <Project>{7E841058-AAEA-9DF8-72A5-7D22FEF4AA36}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>

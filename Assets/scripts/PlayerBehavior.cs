@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour {
     public float _speed;
+    public GameObject Player;
     public Animator _anim;
 	// Use this for initialization
 	void Start () {
+        if(flag.is_transformed == 21)
+            Player.transform.localPosition = new Vector2((float)5.95, (float)-2.3);
         _anim = GetComponent<Animator>();
-	}
+        //DontDestroyOnLoad(Player);
+    }
     void Move()//操控移动函数
     { 
         transform.Translate(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))*_speed*Time.deltaTime,Space.World);

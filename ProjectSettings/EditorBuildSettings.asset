@@ -17,3 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/Scene-bornRoom.unity
     guid: 724dfe765cab5c44eb435ab9286abc8d
+  - enabled: 1
+    path: Assets/scenes/Scene-hallway1.unity
+    guid: 742daae560cd705409fd944fb72a9bd0
+  m_configObjects: {}
