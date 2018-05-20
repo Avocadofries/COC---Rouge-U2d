@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/Scene-bornRoom.unity
+- path: Assets/scenes/Scene-302.unity
   isLoaded: 1
   isActive: 1

@@ -6,10 +6,22 @@ using UnityEngine.UI;
 public class UIOptionsController : MonoBehaviour {
     GameObject OptionsMenu;
     bool IsGamePaused = false;
+
+    private Slider HealthSlider;
+    private Slider SanitySlider;
+   // int PrimalHealth = PlayerStatus.Health;
+   // int PrimalSanity = PlayerStatus.Sanity;
 	// Use this for initialization
 	void Start () {
-        OptionsMenu = GameObject.Find("Main Camera/PlayerCanvas/OptionsMenu");
+        HealthSlider = GameObject.Find("Main Camera/PlayerCanvas/Health").GetComponent<Slider>();
+        SanitySlider = GameObject.Find("Main Camera/PlayerCanvas/Sanity").GetComponent<Slider>();
 
+        HealthSlider.maxValue = JourneyStatus.MaxHealth;//血条最大值
+        SanitySlider.maxValue = JourneyStatus.MaxSanity;//脑残最大值
+        HealthSlider.value = PlayerStatus.Health;
+        SanitySlider.value = PlayerStatus.Sanity;
+
+        OptionsMenu = GameObject.Find("Main Camera/PlayerCanvas/OptionsMenu");
 
         GameObject Options = GameObject.Find("Main Camera/PlayerCanvas/Options");
         Button OptionsButton= (Button)Options.GetComponent<Button>();
@@ -86,6 +98,7 @@ public class UIOptionsController : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-		
-	}
+        HealthSlider.value = PlayerStatus.Health;
+        SanitySlider.value = PlayerStatus.Sanity;
+    }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ObjectColider : MonoBehaviour
 {
     public GameObject HintShow;
-    public GameObject Panel;
+    GameObject Panel;
     Text Dialog; 
     // Use this for initialization
     void Start()

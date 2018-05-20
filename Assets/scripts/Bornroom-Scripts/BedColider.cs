@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class BedColider : MonoBehaviour
 {
     public GameObject HintShow;
-    public GameObject Panel;
+    GameObject Panel;
     Text Dialog;
+    //bool vision = false;
     // Use this for initialization
-    bool legexist = true;
     void Start()
     {
         Panel = GameObject.Find("Main Camera/PlayerCanvas/Dialog");
@@ -32,29 +32,39 @@ public class BedColider : MonoBehaviour
             {
                 HintShow.SetActive(false);
                 Panel.SetActive(true);
-                if (legexist == true)
+                if (JourneyStatus.BedlegExist == true)
                 {
                     Dialog.text = "现在不是休息的时候。\n";
                 }
+                if (JourneyStatus.BedlegExist == false)
+                {
+                    Dialog.text = "少了一条腿的床就更没有\n让人休息的欲望了。\n";
+                }
+
+                if (PlayerStatus.MachineMaintain == true && JourneyStatus.BedlegExist ==true && JourneyStatus.TryToDealBed == false)
+                {
+                    Dialog.text += "(机械修理)\n有一条床腿似乎不那么稳定...\n按[R]拆掉床腿\n";
+                }
+                Dialog.text.Replace("\\n", "\n");
+            }
+
+            if (Input.GetKeyDown(KeyCode.R) && JourneyStatus.BedlegExist == true && PlayerStatus.MachineMaintain == true)
+            {
+                if (PlayerStatus.Strength >= 6)
+                {
+                    Dialog.text = "随着一声脆响\n你的手中多了一根大铁棒子\n(力量增加)\n";
+                    JourneyStatus.BedlegExist = false;
+                    PlayerStatus.Strength++;
+                    JourneyStatus.TryToDealBed = true;
+                }
                 else
                 {
-                    Dialog.text = "三只脚的床就更没有让人睡觉的欲望了。\n";
+                    Dialog.text = "你尽力了\n床腿纹丝不动。\n";
+                    JourneyStatus.TryToDealBed = true;
                 }
-                if (PlayerStatus.MachineMaintain == true)
-                {
-                    Dialog.text += "(机械维修)似乎可以把床腿拔下来当棍子...\n[F]\n";
-                }
+                Dialog.text.Replace("\\n","\n");
 
             }
-
-            if (Input.GetKeyDown(KeyCode.F) && legexist == true)
-            {
-                PlayerStatus.Strength++;
-                legexist = false;
-                Dialog.text = "三只脚的床就更没有让人睡觉的欲望了。\n";
-            }
-
-            Dialog.text.Replace("\\n", "\n");
 
         }
     }
@@ -70,11 +80,6 @@ public class BedColider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (legexist == false)
-        {
-            PlayerStatus.Strength++;
-            Dialog.text = "三条腿的床就更没有让人睡觉的欲望了。";
-        }
 
     }
 }
