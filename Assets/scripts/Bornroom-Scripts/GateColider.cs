@@ -39,7 +39,7 @@ public class GateColider : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R))
             {
                 //Player.transform.localPosition = new Vector2((float)-2.44,(float) -4.23);
-                flag.is_transformed = 12;
+                JourneyStatus.istransformed_born_hall = 12;
                 Application.LoadLevel("Scene-hallway1");
 
             }
