@@ -156,7 +156,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.138799, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -167,7 +167,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3, y: 3.18}
+  m_Size: {x: 0.5175319, y: 3.18}
   m_EdgeRadius: 0
 --- !u!212 &165215330
 SpriteRenderer:
@@ -256,7 +256,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3202759, y: -0.11278528}
+  m_Offset: {x: -0.25465846, y: -0.106924966}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -267,7 +267,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3956268, y: 1.2081872}
+  m_Size: {x: 1.0768692, y: 1.0089446}
   m_EdgeRadius: 0
 --- !u!61 &213303609
 BoxCollider2D:
@@ -869,7 +869,6 @@ GameObject:
   - component: {fileID: 388141013}
   - component: {fileID: 388141016}
   - component: {fileID: 388141015}
-  - component: {fileID: 388141014}
   - component: {fileID: 388141017}
   m_Layer: 0
   m_Name: Meeting
@@ -891,17 +890,6 @@ Transform:
   m_Father: {fileID: 855540242}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &388141014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 388141012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 915d9ac94054c0146b3dcdd280141745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &388141015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -914,7 +902,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.84172255, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -925,7 +913,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3, y: 3.18}
+  m_Size: {x: 0.51752913, y: 3.18}
   m_EdgeRadius: 0
 --- !u!212 &388141016
 SpriteRenderer:
@@ -961,7 +949,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 06a9fa306c8816047a1766aec25a0ea9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -1874,7 +1862,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 0.6933962, b: 0.6933962, a: 1}
     m_HighlightedColor: {r: 0, g: 0.9716981, b: 0.19709586, a: 1}
     m_PressedColor: {r: 0.10679958, g: 0.3018868, b: 0.114602596, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}

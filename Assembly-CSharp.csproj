@@ -87,6 +87,10 @@
     <Compile Include="Assets\Dialogue System\Scripts\Templates\TemplateDialogueUI.cs" />
     <Compile Include="Assets\Dialogue System\Scripts\Templates\TemplateQuestLogWindow.cs" />
     <Compile Include="Assets\Dialogue System\Scripts\Templates\TemplateTextFieldUI.cs" />
+    <Compile Include="Assets\scripts\301Scripts\event_02.cs" />
+    <Compile Include="Assets\scripts\301Scripts\gate_301_to_hall.cs" />
+    <Compile Include="Assets\scripts\301Scripts\intro_301.cs" />
+    <Compile Include="Assets\scripts\301Scripts\meet_02.cs" />
     <Compile Include="Assets\scripts\302Scripts\Gate_302_to_hall.cs" />
     <Compile Include="Assets\scripts\302Scripts\InterludeColider_302.cs" />
     <Compile Include="Assets\scripts\302Scripts\MeetYJSP.cs" />
@@ -101,6 +105,7 @@
     <Compile Include="Assets\scripts\cameraController.cs" />
     <Compile Include="Assets\scripts\HallScripts\Gate_bornroom.cs" />
     <Compile Include="Assets\scripts\HallScripts\Gate_Finalroom.cs" />
+    <Compile Include="Assets\scripts\HallScripts\Gate_room301.cs" />
     <Compile Include="Assets\scripts\HallScripts\Gate_room302.cs" />
     <Compile Include="Assets\scripts\HallScripts\InterludeColider_hall.cs" />
     <Compile Include="Assets\scripts\JourneyStatus.cs" />

@@ -9,6 +9,7 @@ public class InterludeColider_302 : MonoBehaviour
     GameObject Button;
     GameObject Panel;
     Text Dialog;
+    bool impact = false;
     // bool IsGamePaused = true;
     int process1 = 0;
     void Start()
@@ -37,7 +38,7 @@ public class InterludeColider_302 : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-
+        GameObject.Find("Main Camera/PlayerCanvas/Dialog/Button2").SetActive(false);
     }
     private void OnTriggerExit2D(Collider2D collision)//离开时关闭提示信息
     {
@@ -45,8 +46,9 @@ public class InterludeColider_302 : MonoBehaviour
         {
 
             Panel.SetActive(false);
-            //JourneyStatus.Interlude302 = true;
 
+            Debug.Log(JourneyStatus.Interlude302);
+            Debug.Log(JourneyStatus.MeetYJSP);
         }
     }
 
@@ -60,8 +62,7 @@ public class InterludeColider_302 : MonoBehaviour
     {
         if (JourneyStatus.Interlude302 == true)
         {
-            GameObject.Find("Main Camera/PlayerCanvas/Dialog/Button").SetActive(false);
-            GameObject.Find("Main Camera/PlayerCanvas/Dialog/Button2").SetActive(true);
+            GameObject.Find("Main Camera/PlayerCanvas/Dialog/Button").SetActive(false); 
         }
 
         if (process1 == 1)
@@ -87,10 +88,14 @@ public class InterludeColider_302 : MonoBehaviour
         else if (process1 == 5)
         {
             Dialog.text = "男子的目光如同野兽一般。\n似乎有一种摄人心魄的魔力。\n";
-            if (PlayerStatus.Charming >= 3)
+            if (PlayerStatus.Charming >= 3 )
             {
                 Dialog.text += "你的理智受到了冲击。\n";
-                PlayerStatus.Sanity--;
+                if (impact == false)
+                {
+                    PlayerStatus.Sanity--;
+                    impact = true;
+                }
             }
             else if (PlayerStatus.Charming < 3)
             {

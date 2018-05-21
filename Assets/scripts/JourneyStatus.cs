@@ -27,7 +27,9 @@ public class JourneyStatus : MonoBehaviour {
     public static bool HallInterlude = false;
 
     //301
-
+    public static bool Interlude301 = false;
+    public static bool observed = false;
+    public static bool Dia02 = false;
     //302
     public static bool Interlude302 = false;
     public static bool MeetYJSP = false;

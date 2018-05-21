@@ -15,7 +15,12 @@ public class PlayerBehavior : MonoBehaviour {
             Camera.transform.localPosition = new Vector3((float)5.95, (float)-2.3,(float)-10.0);//相机是三维的，切换还要加z轴坐标-10
             JourneyStatus.istransformed_born_hall = 0;
         }
-
+        if (JourneyStatus.istransformed_hall_301 == 21)
+        {
+            Player.transform.localPosition = new Vector2((float)-3.9, (float)-0.45);
+            Camera.transform.localPosition = new Vector3((float)-3.9, (float)-0.45, (float)-10.0);
+            JourneyStatus.istransformed_hall_301 = 0;
+        }
         if (JourneyStatus.istransformed_hall_302 == 21)
         {
             Player.transform.localPosition = new Vector2((float)-0.27, (float)0.00);

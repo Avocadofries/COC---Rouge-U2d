@@ -11,6 +11,7 @@ public class PlayerDataPanel : MonoBehaviour {
     int TagBuff = 0;
 	// Use this for initialization
 	void Start () {
+        TagPanel.GetComponent<Text>().text = "";
         StatusPanel = GameObject.Find("Main Camera/PlayerCanvas/StatusPanel");
         TagPanel = GameObject.Find("Main Camera/PlayerCanvas/StatusPanel/TagPanel");
 
@@ -50,6 +51,22 @@ public class PlayerDataPanel : MonoBehaviour {
         GameObject.Find("Main Camera/PlayerCanvas/StatusPanel/Knowledge").GetComponent<Text>().text = KnowledgeAfter.ToString();
         GameObject.Find("Main Camera/PlayerCanvas/StatusPanel/Charming").GetComponent<Text>().text = CharmingAfter.ToString();
 
+        if (PlayerStatus.Freak == true)
+        {
+            TagPanel.GetComponent<Text>().text += " 怪人";
+        }
+        else if (PlayerStatus.MachineMaintain == true)
+        {
+            TagPanel.GetComponent<Text>().text += " 机械修理";
+        }
+        else if (PlayerStatus.Psychology == true)
+        {
+            TagPanel.GetComponent<Text>().text += " 灵视";
+        }
+        else
+        {
+            TagPanel.GetComponent<Text>().text = "真猛男不需要特质";
+        }
     }
 
     void ShowStatus()

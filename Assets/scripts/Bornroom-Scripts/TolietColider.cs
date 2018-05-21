@@ -40,28 +40,39 @@ public class TolietColider : MonoBehaviour
             {
                 HintShow.SetActive(false);
                 Panel.SetActive(true);
-                if (JourneyStatus.TolietExist == true)
+                if (JourneyStatus.TolietExist == true && JourneyStatus.TryToDealToliet == false)
                 {
                     Dialog.text = "一个马桶,\n这时的你尚且没有这个需求。\n";
                 }
+                else if (JourneyStatus.TryToDealToliet == true)
+                {
+                    Dialog.text = "你决定老老实实地拥抱生命的大和谐,\n而不是像个白痴一样撅着屁股撬马桶。\n";
+                }
               
                
-                if (PlayerStatus.MachineMaintain == true)
+                if (PlayerStatus.MachineMaintain == true && JourneyStatus.TryToDealToliet == false)
                 {
                     Dialog.text += "(机械修理)\n绿翔学院高材生的身份让你有一种\n拆掉它的欲望\n按[R]拆马桶\n";
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.R) && JourneyStatus.TolietExist == true && PlayerStatus.Strength>=6)
+            if (Input.GetKeyDown(KeyCode.R) && JourneyStatus.TolietExist == true)
             {
-                PlayerStatus.Sanity--;
-                Dialog.text = "从下水道中窥见了不可名状之物\n理智受到打击\n";
-                JourneyStatus.TolietExist = false;
-                VoidGate.SetActive(true);
-               // this.gameObject.SetActive(false);
-               this.gameObject.transform.localPosition = new Vector2((float)-50.00, (float)0.00);
-
-
+                if (PlayerStatus.Strength >= 6)
+                {
+                    PlayerStatus.Sanity--;
+                    Dialog.text = "从下水道中窥见了不可名状之物\n理智受到打击\n";
+                    JourneyStatus.TolietExist = false;
+                    JourneyStatus.TryToDealToliet = true;
+                    VoidGate.SetActive(true);
+                    this.gameObject.transform.localPosition = new Vector2((float)-50.00, (float)0.00);
+                }
+                else
+                {
+                    Dialog.text = "你撅着屁股跟马桶较劲,\n而马桶纹丝不动。\n你感觉很没面子。\n";
+                    JourneyStatus.TryToDealToliet = true;
+                }
+               
             }
             Dialog.text.Replace("\\n", "\n");
         }
