@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: furniture
+    uniqueID: 3543631705
+    locked: 0
+  - name: fur2
+    uniqueID: 209245469
+    locked: 0
+  - name: UI
+    uniqueID: 3256167349
+    locked: 0
+  - name: player
+    uniqueID: 2828357791
+    locked: 0
