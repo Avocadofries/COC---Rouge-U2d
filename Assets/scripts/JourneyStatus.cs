@@ -23,6 +23,8 @@ public class JourneyStatus : MonoBehaviour {
     public static bool PaperTranslated = false;
     public static bool TryToDealPapaer = false;
 
+    public static bool IsHaveMusicBk = false;
+
     //hallway
     public static bool HallInterlude = false;
 
