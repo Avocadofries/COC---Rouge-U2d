@@ -16,10 +16,14 @@ public class UIOptionsController : MonoBehaviour {
         HealthSlider = GameObject.Find("Main Camera/PlayerCanvas/Health").GetComponent<Slider>();
         SanitySlider = GameObject.Find("Main Camera/PlayerCanvas/Sanity").GetComponent<Slider>();
 
+        Debug.Log(JourneyStatus.MaxHealth);
+        Debug.Log(PlayerStatus.Health);
         HealthSlider.maxValue = JourneyStatus.MaxHealth;//血条最大值
         SanitySlider.maxValue = JourneyStatus.MaxSanity;//脑残最大值
         HealthSlider.value = PlayerStatus.Health;
         SanitySlider.value = PlayerStatus.Sanity;
+        Debug.Log(JourneyStatus.MaxHealth);
+        Debug.Log(PlayerStatus.Health);
 
         OptionsMenu = GameObject.Find("Main Camera/PlayerCanvas/OptionsMenu");
 

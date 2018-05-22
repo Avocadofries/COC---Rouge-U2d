@@ -15,6 +15,7 @@ public class PlayButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void onClick () {
+        Destroy(menubgm.clone);
         Application.LoadLevel("Scene-Bornroom");
     }
 }

@@ -69,11 +69,11 @@
     <Reference Include="Assembly-UnityScript">
       <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/carbi/Documents/GitHub/COC---Rouge-U2d/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
